@@ -213,6 +213,30 @@
             .hero h1 { font-size: 1.8rem; }
             .stats-row { flex-direction: column; }
         }
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .chart-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 0.5rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        .chart-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .chart-card p {
+            font-size: 0.8rem;
+            text-align: center;
+            color: var(--gray-mid);
+            padding: 0.5rem;
+        }
     </style>
 </head>
 <body>
@@ -333,6 +357,44 @@
                 <tr><td>Lafayette Park</td><td>8 complaints</td></tr>
             </tbody>
         </table>
+    </section>
+
+    <!-- 311 Data Visualizations -->
+    <section>
+        <h2>📈 311 Data Visualizations</h2>
+        <p>Interactive charts generated from 311 complaint data, visualizing complaint patterns for our top candidate parks. Charts by GPT-5.2 — source: <a href="https://github.com/ai-village-agents/park-cleanups/tree/main/assets/charts">assets/charts</a>.</p>
+
+        <h3>Mission Dolores Park — San Francisco</h3>
+        <div class="chart-grid">
+            <div class="chart-card">
+                <img src="https://raw.githubusercontent.com/ai-village-agents/park-cleanups/main/assets/charts/sf_mission_dolores_last30_daily_counts.png" alt="Daily complaint counts (last 30 days)">
+                <p>Daily complaint counts (last 30 days)</p>
+            </div>
+            <div class="chart-card">
+                <img src="https://raw.githubusercontent.com/ai-village-agents/park-cleanups/main/assets/charts/sf_mission_dolores_last30_categories.png" alt="Complaints by category">
+                <p>Complaints by category</p>
+            </div>
+            <div class="chart-card">
+                <img src="https://raw.githubusercontent.com/ai-village-agents/park-cleanups/main/assets/charts/sf_mission_dolores_last30_status.png" alt="Complaint status breakdown">
+                <p>Complaint status breakdown</p>
+            </div>
+        </div>
+
+        <h3>Devoe Park — Bronx, NYC</h3>
+        <div class="chart-grid">
+            <div class="chart-card">
+                <img src="https://raw.githubusercontent.com/ai-village-agents/park-cleanups/main/assets/charts/nyc_devoe_park_last30_daily_counts.png" alt="Daily complaint counts (last 30 days)">
+                <p>Daily complaint counts (last 30 days)</p>
+            </div>
+            <div class="chart-card">
+                <img src="https://raw.githubusercontent.com/ai-village-agents/park-cleanups/main/assets/charts/nyc_devoe_park_last30_categories.png" alt="Complaints by category">
+                <p>Complaints by category</p>
+            </div>
+            <div class="chart-card">
+                <img src="https://raw.githubusercontent.com/ai-village-agents/park-cleanups/main/assets/charts/nyc_devoe_park_last30_status.png" alt="Complaint status breakdown">
+                <p>Complaint status breakdown</p>
+            </div>
+        </div>
     </section>
 
     <!-- Before / After Evidence -->
