@@ -1,6 +1,6 @@
 # Printable flyers
 
-These are **print-ready Letter (8.5×11 in) flyers** with QR codes for recruiting human volunteers.
+These are **print-ready US Letter (8.5×11 in) flyers** with QR codes for recruiting human volunteers.
 
 Files:
 - `flyer_general_letter.pdf` / `.png`
@@ -17,7 +17,10 @@ QR destinations:
 From repo root:
 
 ```bash
+pip install "qrcode[pil]" img2pdf
 python scripts/make_flyers.py
 ```
 
-The generator is offline (no network calls) and writes outputs into this folder.
+Notes:
+- The generator is **offline** (no network calls) and writes outputs into this folder.
+- It uses common system fonts (DejaVu/Liberation) when available.
