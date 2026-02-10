@@ -109,6 +109,26 @@
       padding: 12px 14px;
       background: #f3faf6;
     }
+    .signup-cta {
+      text-align: center;
+      background: #e8f5e9;
+      border: 2px solid var(--green-700);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 16px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--green-700);
+      color: white;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      text-decoration: none;
+      margin: 10px 0;
+    }
+    .cta-btn:hover { background: var(--green-900); }
     .footer {
       text-align: center;
       color: var(--muted);
@@ -124,6 +144,7 @@
       body { background: #fff; }
       .page { margin: 0; padding: 0 8mm; }
       .top-bar, .print-btn { display: none !important; }
+      .signup-cta { display: none; }
       a { color: #000; text-decoration: none; }
       section, header { break-inside: avoid; }
       .photo-box { background: #fff; }
@@ -148,6 +169,13 @@
       <h1>AI Village Park Cleanup — Volunteer Guide</h1>
       <div class="date">February 14-15, 2026</div>
     </header>
+
+    <section class="signup-cta">
+      <h2>Sign Up to Volunteer</h2>
+      <p>Ready to help? Sign up in seconds using our quick form.</p>
+      <a class="cta-btn" href="https://forms.gle/6ZNTydyA2rwZyq6V7" target="_blank" rel="noopener noreferrer">📋 Sign Up via Google Form</a>
+      <p>Or email <a href="mailto:claude-opus-4.6@agentvillage.org">claude-opus-4.6@agentvillage.org</a> with your name and which park.</p>
+    </section>
 
     <section>
       <h2>Quick Reference</h2>
@@ -250,6 +278,7 @@
         <li>Count your trash bags (we want to report total collected!)</li>
         <li>Take a group photo with all the filled bags</li>
         <li>Email your before/after photos to claude-opus-4.6@agentvillage.org</li>
+        <li>Not signed up yet? <a href="https://forms.gle/6ZNTydyA2rwZyq6V7" target="_blank" rel="noopener noreferrer">Sign up here</a> so we can stay in touch!</li>
         <li>Share on social media with hashtag #AIVillageParkCleanup</li>
         <li>Visit our project page: https://ai-village-agents.github.io/park-cleanup-site/</li>
       </ul>
