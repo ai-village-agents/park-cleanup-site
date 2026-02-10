@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Village Park Cleanup — Volunteer Guide</title>
+  <style>
+    :root {
+      --green-900: #2d6a4f;
+      --green-700: #40916c;
+      --green-500: #52b788;
+      --text: #1b1f1d;
+      --muted: #4c5b55;
+      --bg: #f7fbf8;
+      --border: #d7e6dd;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.45;
+    }
+    a { color: var(--green-900); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .page {
+      max-width: 900px;
+      margin: 28px auto 48px;
+      padding: 0 24px 32px;
+    }
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .print-btn {
+      background: var(--green-700);
+      color: #fff;
+      border: none;
+      padding: 10px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+    .print-btn:hover { background: var(--green-900); }
+    header {
+      border: 2px solid var(--green-700);
+      background: #fff;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 18px;
+    }
+    header h1 {
+      margin: 0 0 6px;
+      color: var(--green-900);
+      font-size: 1.65rem;
+    }
+    header .date {
+      color: var(--muted);
+      font-weight: 600;
+    }
+    section {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin-bottom: 16px;
+    }
+    h2 {
+      margin: 0 0 10px;
+      font-size: 1.15rem;
+      color: var(--green-900);
+    }
+    .quick-ref {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .quick-col h3 {
+      margin: 0 0 8px;
+      color: var(--green-700);
+      font-size: 1.05rem;
+    }
+    ul { margin: 0; padding-left: 18px; }
+    .checklist { display: grid; gap: 10px; }
+    .checklist h3 {
+      margin: 0 0 6px;
+      color: var(--green-700);
+      font-size: 1.02rem;
+    }
+    .checklist label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin: 4px 0;
+    }
+    .checklist input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      margin-top: 3px;
+      accent-color: var(--green-700);
+    }
+    .timeline li { margin: 4px 0; }
+    .photo-box {
+      border: 2px dashed var(--green-500);
+      padding: 12px 14px;
+      background: #f3faf6;
+    }
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .footer p { margin: 6px 0; }
+
+    @media (max-width: 720px) {
+      .quick-ref { grid-template-columns: 1fr; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { margin: 0; padding: 0 8mm; }
+      .top-bar, .print-btn { display: none !important; }
+      a { color: #000; text-decoration: none; }
+      section, header { break-inside: avoid; }
+      .photo-box { background: #fff; }
+      .checklist input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        border: 1px solid #000;
+        width: 14px;
+        height: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="top-bar">
+      <a href="index.html">&larr; Back to main site</a>
+      <button class="print-btn" onclick="window.print()">Print this guide</button>
+    </div>
+
+    <header>
+      <h1>AI Village Park Cleanup — Volunteer Guide</h1>
+      <div class="date">February 14-15, 2026</div>
+    </header>
+
+    <section>
+      <h2>Quick Reference</h2>
+      <div class="quick-ref">
+        <div class="quick-col">
+          <h3>Devoe Park (Bronx, NYC)</h3>
+          <ul>
+            <li><strong>Address:</strong> W 238th St &amp; Sedgwick Ave, Bronx, NY 10468</li>
+            <li><strong>Date:</strong> Saturday, February 15, 2026</li>
+            <li><strong>Time:</strong> 10:00 AM – 12:00 PM EST</li>
+            <li><strong>Meeting Point:</strong> Park entrance at W 238th St &amp; Sedgwick Ave</li>
+            <li><strong>Weather:</strong> Cold &amp; Sunny, High ~40&deg;F / Low ~24&deg;F</li>
+            <li><strong>Nearest Subway:</strong> 1 train to 238th St station</li>
+          </ul>
+        </div>
+        <div class="quick-col">
+          <h3>Mission Dolores Park (San Francisco)</h3>
+          <ul>
+            <li><strong>Address:</strong> Dolores St &amp; 19th St, San Francisco, CA 94114</li>
+            <li><strong>Date:</strong> Saturday, February 15, 2026</li>
+            <li><strong>Time:</strong> 10:00 AM – 12:00 PM PST</li>
+            <li><strong>Meeting Point:</strong> Main entrance at Dolores St &amp; 18th St</li>
+            <li><strong>Weather:</strong> Light Rain possible, High ~55&deg;F</li>
+            <li><strong>Nearest Transit:</strong> BART to 16th St Mission, then walk</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>What to Bring Checklist</h2>
+      <div class="checklist">
+        <div>
+          <h3>Essential</h3>
+          <label><input type="checkbox"> Trash bags (heavy-duty, at least 3-5 per person)</label>
+          <label><input type="checkbox"> Work gloves (disposable or gardening gloves)</label>
+          <label><input type="checkbox"> Comfortable closed-toe shoes</label>
+          <label><input type="checkbox"> Water bottle</label>
+          <label><input type="checkbox"> Smartphone (for before/after photos)</label>
+        </div>
+        <div>
+          <h3>Recommended</h3>
+          <label><input type="checkbox"> Hand sanitizer</label>
+          <label><input type="checkbox"> Sunscreen (even in winter!)</label>
+          <label><input type="checkbox"> Warm layers (especially NYC — 40&deg;F!)</label>
+          <label><input type="checkbox"> Rain jacket (especially SF)</label>
+          <label><input type="checkbox"> Snacks/energy bars</label>
+          <label><input type="checkbox"> Reusable grabber/picker tool (optional but helpful)</label>
+        </div>
+        <div>
+          <h3>Nice to Have</h3>
+          <label><input type="checkbox"> Bucket or small container for sorting recyclables</label>
+          <label><input type="checkbox"> First aid kit</label>
+          <label><input type="checkbox"> Extra bags for recyclables vs. trash</label>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Day-Of Timeline</h2>
+      <ul class="timeline">
+        <li>9:30 AM: Arrive at meeting point</li>
+        <li>9:45 AM: Group briefing — safety tips, area assignments, photo plan</li>
+        <li>10:00 AM: BEFORE photos (see photo instructions below)</li>
+        <li>10:15 AM – 11:45 AM: Cleanup! Work in pairs when possible</li>
+        <li>11:45 AM: AFTER photos from same locations</li>
+        <li>12:00 PM: Wrap up, count bags, group photo, celebration!</li>
+      </ul>
+    </section>
+
+    <section class="photo-box">
+      <h2>📸 Before &amp; After Photos — CRITICAL for our project!</h2>
+      <ul>
+        <li>Take 5-10 "BEFORE" photos from multiple angles BEFORE starting cleanup</li>
+        <li>Note where you stood for each photo (use landmarks as reference)</li>
+        <li>Take matching "AFTER" photos from the SAME spots after cleanup</li>
+        <li>Include wide shots AND close-ups of problem areas</li>
+        <li>Tips: Use landscape orientation, include identifiable landmarks, capture timestamps</li>
+        <li>Email photos to: claude-opus-4.6@agentvillage.org with subject "Park Cleanup Photos - [Park Name]"</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Safety Tips</h2>
+      <ul>
+        <li>Never pick up sharp objects (glass, needles) with bare hands</li>
+        <li>Don't pick up hazardous materials (chemicals, paint, etc.)</li>
+        <li>Stay hydrated — bring water!</li>
+        <li>Work in pairs, especially in less visible areas</li>
+        <li>Watch your footing on uneven ground</li>
+        <li>If you find anything suspicious, leave it and notify others</li>
+        <li>NYC volunteers: Dress warmly! Wind chill can be brutal</li>
+        <li>SF volunteers: Bring rain gear, paths may be slippery</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>After the Cleanup</h2>
+      <ul>
+        <li>Count your trash bags (we want to report total collected!)</li>
+        <li>Take a group photo with all the filled bags</li>
+        <li>Email your before/after photos to claude-opus-4.6@agentvillage.org</li>
+        <li>Share on social media with hashtag #AIVillageParkCleanup</li>
+        <li>Visit our project page: https://ai-village-agents.github.io/park-cleanup-site/</li>
+      </ul>
+    </section>
+
+    <section class="footer">
+      <p>Organized by AI Village — a project by AI Digest (theaidigest.org)</p>
+      <p>This cleanup is part of an experiment where AI agents organize real-world community action.</p>
+      <p>Questions? Email claude-opus-4.6@agentvillage.org</p>
+    </section>
+  </div>
+</body>
+</html>
