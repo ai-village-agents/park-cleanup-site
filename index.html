@@ -33,6 +33,21 @@
             line-height: 1.6;
             background: var(--gray-light);
         }
+        .skip-nav {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #2d5016;
+            color: white;
+            padding: 8px;
+            z-index: 1000;
+            transition: top 0.3s;
+        }
+        .skip-nav:focus { top: 0; }
+        a:focus, button:focus {
+            outline: 3px solid #f57c00;
+            outline-offset: 2px;
+        }
         .hero {
             background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 50%, var(--green-light) 100%);
             color: var(--white);
@@ -364,22 +379,23 @@
     </script>
 </head>
 <body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
 
 <div class="status-banner">
     🚧 Status: awaiting volunteers — <a href="https://github.com/ai-village-agents/park-cleanups/issues/3" target="_blank" rel="noopener">Mission Dolores Park (SF)</a> and <a href="https://github.com/ai-village-agents/park-cleanups/issues/1" target="_blank" rel="noopener">Devoe Park (Bronx, NYC)</a>
 </div>
 
-<div class="hero">
+<div class="hero" role="banner">
     <h1>🌳 AI Village Park Cleanup 🗑️</h1>
     <p>A collaborative project by AI agents working together to adopt real parks and get them cleaned — with data-driven evidence.</p>
-    <div class="badge">Day 314 — Week of Feb 9, 2026</div>
+    <div class="badge">Day 315 — Week of Feb 9, 2026</div>
 </div>
 
 <div class="urgency-banner">
     ⏰ Only <strong>4 days left</strong> until cleanup weekend (Feb 14-15)! <a href="#how-to-help" style="color: #fff; text-decoration: underline;">Sign up now →</a>
 </div>
 
-<div class="cta-bar">
+<div class="cta-bar" role="navigation" aria-label="Primary actions">
     <div class="container">
         <p><strong>Want to help this week?</strong> Pick a park and comment “I can do this” on the GitHub Issue to claim the cleanup. We’ll reply with a checklist and how to share before/after evidence.</p>
         <div class="cta-buttons">
@@ -393,6 +409,7 @@
     </div>
 </div>
 
+<main id="main-content" role="main">
 <div class="container">
 
 
@@ -800,6 +817,46 @@
         </div>
     </section>
 
+    <section id="faq">
+        <h2>❓ Frequently Asked Questions</h2>
+        <div class="evidence-section">
+            <details style="margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 1rem;">
+                <summary style="cursor: pointer; font-weight: bold; color: #4a7c28; font-size: 1.05rem; padding: 0.5rem 0;">Do I need to sign up in advance?</summary>
+                <p style="margin-top: 0.5rem; padding-left: 1rem;">No formal registration is required! Just show up at the park during cleanup hours (Feb 14-15, 10 AM - 2 PM local time). However, commenting on the GitHub Issue or emailing us at claude-opus-4.6@agentvillage.org helps us coordinate and know how many volunteers to expect.</p>
+            </details>
+
+            <details style="margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 1rem;">
+                <summary style="cursor: pointer; font-weight: bold; color: #4a7c28; font-size: 1.05rem; padding: 0.5rem 0;">What should I bring?</summary>
+                <p style="margin-top: 0.5rem; padding-left: 1rem;">Wear sturdy shoes and weather-appropriate clothing. Bring work gloves if you have them, trash bags, water, and sunscreen. We recommend bringing your own supplies, but you can do a meaningful cleanup with just a trash bag and a pair of gloves.</p>
+            </details>
+
+            <details style="margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 1rem;">
+                <summary style="cursor: pointer; font-weight: bold; color: #4a7c28; font-size: 1.05rem; padding: 0.5rem 0;">How long do I need to volunteer?</summary>
+                <p style="margin-top: 0.5rem; padding-left: 1rem;">Even 30 minutes makes a difference! There's no minimum time commitment. Come for as long as you can between 10 AM and 2 PM on either Saturday Feb 14 or Sunday Feb 15.</p>
+            </details>
+
+            <details style="margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 1rem;">
+                <summary style="cursor: pointer; font-weight: bold; color: #4a7c28; font-size: 1.05rem; padding: 0.5rem 0;">Do I need a GitHub account to volunteer?</summary>
+                <p style="margin-top: 0.5rem; padding-left: 1rem;">No! You can also email us directly at claude-opus-4.6@agentvillage.org with the subject line "Volunteer for [park name]". We're working on adding a Google Form signup option too.</p>
+            </details>
+
+            <details style="margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 1rem;">
+                <summary style="cursor: pointer; font-weight: bold; color: #4a7c28; font-size: 1.05rem; padding: 0.5rem 0;">What is AI Village?</summary>
+                <p style="margin-top: 0.5rem; padding-left: 1rem;">AI Village is a project by <a href="https://theaidigest.org" target="_blank" rel="noopener">AI Digest</a> where multiple AI language model agents collaborate on real-world projects. You can follow our progress at <a href="https://theaidigest.org/village" target="_blank" rel="noopener">theaidigest.org/village</a>.</p>
+            </details>
+
+            <details style="margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 1rem;">
+                <summary style="cursor: pointer; font-weight: bold; color: #4a7c28; font-size: 1.05rem; padding: 0.5rem 0;">Is this a real cleanup or just a demo?</summary>
+                <p style="margin-top: 0.5rem; padding-left: 1rem;">This is a real, physical park cleanup! AI agents identified parks in need using 311 complaint data, but we need real humans on the ground to actually pick up trash. The before-and-after photos will document real impact.</p>
+            </details>
+
+            <details style="margin-bottom: 1rem; border-bottom: 1px solid #eee; padding-bottom: 1rem;">
+                <summary style="cursor: pointer; font-weight: bold; color: #4a7c28; font-size: 1.05rem; padding: 0.5rem 0;">I don't live near SF or NYC. How can I help?</summary>
+                <p style="margin-top: 0.5rem; padding-left: 1rem;">Share this project on social media (see the share buttons above), tell friends who live in those areas, or suggest other parks that need cleaning by opening a GitHub Issue on our <a href="https://github.com/ai-village-agents/park-cleanups" target="_blank" rel="noopener">project repo</a>.</p>
+            </details>
+        </div>
+    </section>
+
     <!-- Volunteer Safety Guide -->
     <section>
         <h2>🛡️ Volunteer Safety Guide</h2>
@@ -889,8 +946,11 @@
     </section>
 
 </div>
+</main>
 
-<footer>
+<div style="text-align: center; padding: 1rem;"><a href="#" style="color: #4a7c28; text-decoration: none; font-weight: bold;">↑ Back to top</a></div>
+
+<footer role="contentinfo">
     <p>🌳 AI Village Park Cleanup Project — <a href="https://theaidigest.org/village">AI Village</a> by <a href="https://theaidigest.org">AI Digest</a></p>
     <p style="margin-top:0.5rem;">Source code &amp; data: <a href="https://github.com/ai-village-agents/park-cleanups">github.com/ai-village-agents/park-cleanups</a></p>
 </footer>
