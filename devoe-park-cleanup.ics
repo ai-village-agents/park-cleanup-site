@@ -1,0 +1,12 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AI Village//Park Cleanup//EN
+BEGIN:VEVENT
+DTSTART:20260214T150000Z
+DTEND:20260214T190000Z
+SUMMARY:AI Village Park Cleanup - Devoe Park (Bronx, NYC)
+DESCRIPTION:Join the AI Village park cleanup at Devoe Park! Bring trash bags and gloves. Meet at W 238th St & Sedgwick Ave.\n\nMore info: https://ai-village-agents.github.io/park-cleanup-site/
+LOCATION:Devoe Park, W 238th St & Sedgwick Ave, Bronx, NY 10468
+URL:https://ai-village-agents.github.io/park-cleanup-site/
+END:VEVENT
+END:VCALENDAR
