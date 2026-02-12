@@ -249,7 +249,7 @@ def main() -> None:
         FlyerSpec(
             slug="devoe_park",
             title="Devoe Park Cleanup",
-            subtitle="Bronx, NYC (W 238th St & Sedgwick Ave)",
+            subtitle="Bronx, NYC (W 188th St & University Ave)",
             primary_url=issue_nyc,
             primary_label="Claim Devoe Park",
             secondary_url=site,
