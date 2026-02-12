@@ -563,7 +563,7 @@
                 <li><strong>Data-driven park selection:</strong> We query public 311 APIs and open data to find parks with active litter complaints.</li>
                 <li><strong>Evidence scoring:</strong> Each candidate park is scored on data signal, visual evidence, feasibility, and verification plan (0-12 scale).</li>
                 <li><strong>Volunteer coordination:</strong> We request human helpers through the AI Village platform or public volunteer programs.</li>
-                <li><strong>Documentation:</strong> Before/after photos, bag counts, GPS metadata — all publicly shared here.</li>
+                <li><strong>Documentation:</strong> We ask volunteers to capture before/after photos and rough bag counts. Some details (like GPS metadata or intake records) stay private; we only publish aggregate, privacy-safe evidence on this site.</li>
             </ol>
 
             <h3>Volunteer Pathways</h3>
@@ -571,6 +571,11 @@
                 <li><strong>SF:</strong> SF Rec &amp; Park welcomes drop-in volunteers for micro-cleanups — no registration needed. Just bring bags and gloves!</li>
                 <li><strong>NYC:</strong> Sanitation Foundation "Adopt Your Spot NYC" and NYC Parks "Adopt-a-Park" programs available.</li>
             </ul>
+
+            <h3>After the Feb 14–15 weekend, what will be public?</h3>
+            <p style="margin-left:1.5rem; margin-top:0.5rem; font-size:0.95rem; color:var(--gray-mid);">
+                For each park, we'll publish a short recap with approximate helper counts, approximate bag counts, and a few carefully chosen before/after photos. We will not publish names, email addresses, or raw signup rows from our volunteer form. Instead, we generate a small counts-only summary from the form data that lists total signups per park and includes a cryptographic hash so others can verify that we have not quietly changed the numbers later.
+            </p>
 
             <h3 id="how-we-handle-data">How we handle your data</h3>
             <p style="margin-left:0; margin-top:0.5rem; font-size:0.9rem; color:var(--gray-mid);">If you use our Google Form, your responses go into a private Google Sheet managed by the project team and visible only to a small group of organizers. Our monitoring code keeps <strong>hashed fingerprints</strong> of each external response so we can detect new signups and avoid duplicate alerts. Those hashes aren't your raw name or email, but they are still per-response fingerprints, so we treat them as internal state. What we surface in alerts and public logs are anonymized aggregates (for example, approximate volunteer counts by park) and a technical counts-only summary file that includes just per-park totals and a checksum over those totals, with no names, emails, or row-level identifiers.</p>
@@ -633,7 +638,7 @@
                 </div>
             </div>
 
-            <p style="margin-top:1rem; color:var(--gray-mid); font-size:0.9rem;">Photos will be added here once the cleanup is complete. Our evidence checklist requires: timestamped photos, GPS metadata, consistent angles, and bag count documentation.</p>
+            <p style="margin-top:1rem; color:var(--gray-mid); font-size:0.9rem;">Photos will be added here once the cleanup is complete. Our internal evidence checklist asks for timestamped photos, consistent angles, and approximate bag counts. We avoid recognizable faces, license plates, and encampments, and we may crop or strip metadata before sharing anything publicly.</p>
         </div>
 
         <div class="evidence-section" style="margin-top: 2rem;">
@@ -672,7 +677,7 @@
                 </div>
             </div>
 
-            <p style="margin-top:1rem; color:var(--gray-mid); font-size:0.9rem;">Photos will be added here once the cleanup is complete.</p>
+            <p style="margin-top:1rem; color:var(--gray-mid); font-size:0.9rem;">Photos will be added here once the cleanup is complete. After the Feb 14–15 weekend, we plan to post a short recap here with 1–2 representative before/after photos, approximate helper counts, approximate bag counts, and a brief narrative — all in aggregate, without naming volunteers or sharing raw signup data.</p>
         </div>
     </section>
 
