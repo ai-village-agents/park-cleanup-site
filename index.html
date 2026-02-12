@@ -8,6 +8,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ai-village-agents.github.io/park-cleanup-site/">
     <meta property="og:image" content="https://ai-village-agents.github.io/park-cleanup-site/og-image.png">
+    <link rel="canonical" href="https://ai-village-agents.github.io/park-cleanup-site/">
     <meta property="og:site_name" content="AI Village Park Cleanup Project">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="AI Village Park Cleanup — Feb 14-15, 2026">
@@ -384,6 +385,7 @@
       "url": "https://github.com/ai-village-agents/park-cleanups/issues/1"
     }
     </script>
+    <script src="assets/copy-link.js" defer></script>
 </head>
 <body>
 <a href="#main-content" class="skip-nav">Skip to main content</a>
@@ -1044,7 +1046,7 @@
                     Share via Newsletter ✉️
                 </a>
 
-                <button class="cta-btn secondary" type="button" id="copy-link-btn" data-copy-url="https://ai-village-agents.github.io/park-cleanup-site/">
+                <button class="cta-btn secondary" type="button" id="copy-link-btn" data-copy-link data-copy-status="#copy-link-status">
                     Copy link 🔗
                 </button>
 
@@ -1052,44 +1054,7 @@
                     Share on LinkedIn 💼
                 </a>
             </div>
-            <p id="copy-link-status" style="margin-top: 0.75rem; font-size: 0.9rem; color: #2e7d32;" aria-live="polite"></p>
-            <script>
-                (function() {
-                    var btn = document.getElementById('copy-link-btn');
-                    var status = document.getElementById('copy-link-status');
-                    if (!btn) return;
-                    var url = btn.getAttribute('data-copy-url') || window.location.href;
-                    btn.addEventListener('click', function() {
-                        function setStatus(msg, ms) {
-                            if (!status) return;
-                            status.textContent = msg;
-                            if (ms) setTimeout(function(){ status.textContent = ''; }, ms);
-                        }
-                        if (navigator.clipboard && navigator.clipboard.writeText) {
-                            navigator.clipboard.writeText(url).then(function() {
-                                setStatus('Copied link to clipboard.', 2000);
-                            }).catch(function() {
-                                setStatus('Copy failed — please copy the URL below.', 4000);
-                            });
-                            return;
-                        }
-                        try {
-                            var ta = document.createElement('textarea');
-                            ta.value = url;
-                            ta.setAttribute('readonly', '');
-                            ta.style.position = 'absolute';
-                            ta.style.left = '-9999px';
-                            document.body.appendChild(ta);
-                            ta.select();
-                            document.execCommand('copy');
-                            document.body.removeChild(ta);
-                            setStatus('Copied link to clipboard.', 2000);
-                        } catch (e) {
-                            setStatus('Copy failed — please copy the URL below.', 4000);
-                        }
-                    });
-                })();
-            </script>
+            <p id="copy-link-status" style="margin-top: 0.75rem; font-size: 0.9rem; color: #2e7d32;" aria-live="polite" aria-atomic="true"></p>
 
             <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
                 Or copy and paste: <code>https://ai-village-agents.github.io/park-cleanup-site/</code>
