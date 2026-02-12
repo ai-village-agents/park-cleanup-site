@@ -90,6 +90,7 @@
             text-decoration: none;
             font-weight: 700;
         }
+        button.cta-btn { cursor: pointer; font-family: inherit; font-size: 1rem; }
         .cta-btn.primary { background: var(--orange); color: var(--white); }
         .cta-btn.secondary {
             background: var(--green-pale);
@@ -1023,20 +1024,53 @@
                     Share via Newsletter ✉️
                 </a>
 
-
-                <a class="cta-btn secondary" href="https://twitter.com/intent/tweet?text=AI%20Village%20is%20organizing%20a%20park%20cleanup%20in%20SF%20(Mission%20Dolores)%20and%20NYC%20(Devoe%20Park)!%20%F0%9F%8C%B3%F0%9F%97%91%EF%B8%8F%20They%20need%20human%20volunteers%20this%20weekend.%20Check%20it%20out:&url=https%3A%2F%2Fai-village-agents.github.io%2Fpark-cleanup-site%2F" target="_blank" rel="noopener">
-                    Share on X 🐦
-                </a>
-                
+                <button class="cta-btn secondary" type="button" id="copy-link-btn" data-copy-url="https://ai-village-agents.github.io/park-cleanup-site/">
+                    Copy link 🔗
+                </button>
 
                 <a class="cta-btn secondary" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fai-village-agents.github.io%2Fpark-cleanup-site%2F" target="_blank" rel="noopener">
                     Share on LinkedIn 💼
                 </a>
-                
-                <a class="cta-btn secondary" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fai-village-agents.github.io%2Fpark-cleanup-site%2F" target="_blank" rel="noopener">
-                    Share on Facebook 📘
-                </a>
             </div>
+            <p id="copy-link-status" style="margin-top: 0.75rem; font-size: 0.9rem; color: #2e7d32;" aria-live="polite"></p>
+            <script>
+                (function() {
+                    var btn = document.getElementById('copy-link-btn');
+                    var status = document.getElementById('copy-link-status');
+                    if (!btn) return;
+                    var url = btn.getAttribute('data-copy-url') || window.location.href;
+                    btn.addEventListener('click', function() {
+                        function setStatus(msg, ms) {
+                            if (!status) return;
+                            status.textContent = msg;
+                            if (ms) setTimeout(function(){ status.textContent = ''; }, ms);
+                        }
+                        if (navigator.clipboard && navigator.clipboard.writeText) {
+                            navigator.clipboard.writeText(url).then(function() {
+                                setStatus('Copied link to clipboard.', 2000);
+                            }).catch(function() {
+                                setStatus('Copy failed — please copy the URL below.', 4000);
+                            });
+                            return;
+                        }
+                        try {
+                            var ta = document.createElement('textarea');
+                            ta.value = url;
+                            ta.setAttribute('readonly', '');
+                            ta.style.position = 'absolute';
+                            ta.style.left = '-9999px';
+                            document.body.appendChild(ta);
+                            ta.select();
+                            document.execCommand('copy');
+                            document.body.removeChild(ta);
+                            setStatus('Copied link to clipboard.', 2000);
+                        } catch (e) {
+                            setStatus('Copy failed — please copy the URL below.', 4000);
+                        }
+                    });
+                })();
+            </script>
+
             <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
                 Or copy and paste: <code>https://ai-village-agents.github.io/park-cleanup-site/</code>
             </p>
