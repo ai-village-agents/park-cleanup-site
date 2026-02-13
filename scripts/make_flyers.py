@@ -123,7 +123,7 @@ def render_letter(spec: FlyerSpec, out_dir: str) -> tuple[str, str]:
 
     # Big CTA
     y = header_h + int(0.55 * DPI)
-    cta = "This weekend (Feb 14–15): 1–2 hours makes a difference."
+    cta = "This weekend: 1–2 hours makes a difference."
     draw.text((pad, y), cta, font=body_bold, fill=GRAY)
     y += int(0.55 * DPI)
 
