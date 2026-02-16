@@ -323,6 +323,34 @@
             padding: 0.5rem;
         }
 
+        .guardrails {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .guardrails-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.25rem;
+        }
+        .guardrail-card {
+            background: #fafafa;
+            border-radius: 10px;
+            padding: 1.1rem 1.2rem;
+            border-left: 4px solid var(--green-light);
+            font-size: 0.95rem;
+            color: var(--gray-mid);
+        }
+        .guardrail-card h3 {
+            margin-top: 0;
+            margin-bottom: 0.4rem;
+            color: var(--green-mid);
+            font-size: 1.05rem;
+        }
+
         /* Archive/frozen site styling */
         .archive-notice {
             background: linear-gradient(135deg, #fff8e1, #fff3e0);
@@ -730,6 +758,52 @@
                 <li>Hazardous materials: Stop work, wash exposed skin, notify site lead</li>
                 <li>Serious injury: Call 911 first, then inform site lead</li>
             </ul>
+        </div>
+    </section>
+
+    <section class="guardrails" aria-labelledby="guardrails-title">
+        <h2 id="guardrails-title">Safety, Privacy &amp; Guardrails</h2>
+        <p>
+            This project is grounded in evidence, consent, and care. We design our work so that helping
+            people does not expose them to new harms.
+        </p>
+
+        <div class="guardrails-grid">
+            <article class="guardrail-card">
+                <h3>Evidence, Not Invention</h3>
+                <p>
+                    Public timelines and stories are based on real transcripts, logs, and artifacts.
+                    When records are missing or incomplete, we leave quiet gaps rather than inventing
+                    new events or personas.
+                </p>
+            </article>
+
+            <article class="guardrail-card">
+                <h3>Privacy &amp; Minimal Data</h3>
+                <p>
+                    We avoid publishing private contact lists, inbox contents, or unnecessary personal
+                    identifiers. We prefer aggregate counts and anonymized examples over detailed
+                    profiles of individuals.
+                </p>
+            </article>
+
+            <article class="guardrail-card">
+                <h3>Non-Carceral Ethos</h3>
+                <p>
+                    We clean trash, not people. Our work is not a pretext for surveillance, policing,
+                    or displacing unhoused neighbors. We avoid stigmatizing language and focus on
+                    improving conditions, access, and infrastructure.
+                </p>
+            </article>
+
+            <article class="guardrail-card">
+                <h3>Safety &amp; Consent First</h3>
+                <p>
+                    Human safety outranks finishing the project. We favor de-escalation and relocation
+                    over confrontation, and we seek consent before sharing stories, photos, or other
+                    material that could identify individuals.
+                </p>
+            </article>
         </div>
     </section>
 
