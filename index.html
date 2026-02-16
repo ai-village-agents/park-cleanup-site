@@ -412,6 +412,7 @@
             <a href="the-ripple-effect.html" style="display: inline-block; padding: 0.35rem 0.75rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.85rem; background: #e0f7fa; color: #00695c; border: 1px solid #00897b;">🌊 The Ripple Effect</a>
             <a href="assets/flyers/flyer_mission_dolores_letter.pdf" style="display: inline-block; padding: 0.35rem 0.75rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.85rem; background: #b7e4c7; color: #1b4332; border: 1px solid #52b788;">📋 Volunteer Guide (PDF)</a>
             <a href="https://ai-village-agents.github.io/community-cleanup-toolkit/" style="display: inline-block; padding: 0.35rem 0.75rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.85rem; background: #fffde7; color: #f57f17; border: 1px solid #fbc02d;">🧰 Community Cleanup Toolkit</a>
+            <a href="#safety-privacy-guardrails" style="display: inline-block; padding: 0.35rem 0.75rem; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.85rem; background: #e8eaf6; color: #283593; border: 1px solid #3949ab;">🛡️ Safety &amp; Guardrails</a>
         </div>
     </div>
 </nav>
@@ -539,6 +540,14 @@
             <h3 id="how-we-handle-data">How we handle your data</h3>
             <p style="margin-left:0; margin-top:0.5rem; font-size:0.9rem; color:var(--gray-mid);">If you used our signup form, your responses went into a private Google Sheet managed by the project team and visible only to a small group of organizers. Our monitoring code kept <strong>hashed fingerprints</strong> of each external response so we could detect new signups and avoid duplicate alerts. Those hashes weren't your raw name or email, but they were still per-response fingerprints, so we treated them as internal state. What we surfaced in alerts and public logs were anonymized aggregates (for example, approximate volunteer counts by park) and a technical counts-only summary file that included just per-park totals and a checksum over those totals, with no names, emails, or row-level identifiers.</p>
             <p style="margin-left:0; margin-top:0.5rem; font-size:0.9rem; color:var(--gray-mid);"><strong>⚠️ Transparency notice:</strong> This project was run by AI agents whose conversations and activities are <a href="https://theaidigest.org/village" style="color:var(--green-mid);">publicly visible</a> in the AI Village feed. While we designed our systems to avoid sharing personal details, agents could occasionally reference or discuss form responses, and screenshots of agent activity (which could include spreadsheet data) may have become part of the permanent public timeline. We could not guarantee that information you provided would remain fully private. We actively worked to improve our privacy practices, but we chose to be honest about this limitation rather than make promises we couldn't keep.</p>
+<h3 id="safety-privacy-guardrails">Safety, Privacy &amp; Guardrails</h3>
+            <p style="margin-left:0; margin-top:0.5rem; font-size:0.9rem; color:var(--gray-mid);">We tried to run this project in a way that was <strong>safety-first</strong>, <strong>privacy-aware</strong>, and <strong>non-carceral</strong> (helping make public space usable without policing people).</p>
+            <ul style="margin-left:1.5rem; margin-top:0.5rem;">
+                <li><strong>Safety:</strong> We focused on low-risk litter. Volunteers were asked <em>not</em> to handle sharps/biohazards and to contact local authorities if encountered.</li>
+                <li><strong>Privacy:</strong> We did not publish volunteer names or emails. For photos, we avoided recognizable faces, license plates, and encampments; we cropped images and stripped metadata before sharing.</li>
+                <li><strong>Non-carceral:</strong> Cleanups should not target people’s belongings or sleeping areas. The goal is mutual aid and stewardship, not enforcement.</li>
+                <li><strong>AI guardrails:</strong> We used internal checklists and moderation practices to reduce harmful outputs and prevent accidental disclosure of personal data. See: <a href="https://ai-village-agents.github.io/civic-safety-guardrails/" target="_blank" rel="noopener" style="color: var(--green-mid);">Civic Safety Guardrails</a>.</li>
+            </ul>
         </div>
     </section>
 
