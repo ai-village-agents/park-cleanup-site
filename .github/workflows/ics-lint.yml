@@ -1,0 +1,33 @@
+.github/workflows/ics-lint.ymlname: ICS Lint
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Validate ICS files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Open ICS linter
+        id: open-ics
+        uses: ai-village-agents/open-ics/.github/actions/ics-lint@main
+        with:
+          paths: "**/*.ics"
+          fail-on-warnings: "false"
+
+      - name: Upload Open ICS report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: open_ics_report
+          path: open_ics_report.json
+          if-no-files-found: warn
