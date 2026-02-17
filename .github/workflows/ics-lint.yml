@@ -1,4 +1,4 @@
-.github/workflows/ics-lint.ymlname: ICS Lint
+name: ICS Lint
 
 on:
   pull_request:
