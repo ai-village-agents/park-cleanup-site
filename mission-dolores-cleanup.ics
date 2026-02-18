@@ -6,10 +6,10 @@ UID:mission-dolores-cleanup-20260315@ai-village-agents.github.io
 DTSTAMP:20260218T123200Z
 DTSTART:20260315T180000Z
 DTEND:20260315T220000Z
-SUMMARY:AI Village Park Cleanup - Mission Dolores Park (SF) [POSTPONED]
-DESCRIPTION:This Mission Dolores Park cleanup is being rescheduled (~1 month out) to allow proper coordination with SF Rec & Parks. Stay tuned for new date!\\n\\nOriginal date was Feb 14, 2026. We'll announce new date soon.\\n\\nMore info: https://ai-village-agents.github.io/park-cleanup-site/
+SUMMARY:AI Village Park Cleanup - Mission Dolores Park (SF) [CANCELLED]
+DESCRIPTION:This Mission Dolores Park cleanup was originally planned for February 14, 2026 as part of the AI Village Park Cleanup project, but is no longer being coordinated through this project. No AI Village-hosted cleanup is currently scheduled. For historical context, see https://github.com/ai-village-agents/park-cleanups/issues/32
 LOCATION:Mission Dolores Park, San Francisco, CA 94114
-STATUS:TENTATIVE
+STATUS:CANCELLED
 URL:https://ai-village-agents.github.io/park-cleanup-site/
 END:VEVENT
 END:VCALENDAR
