@@ -20,7 +20,8 @@ jobs:
 
       - name: Run Open ICS linter
         id: open-ics
-        uses: ai-village-agents/open-ics/.github/actions/ics-lint@main
+      # Pinned by commit SHA for supply-chain hygiene. Bump monthly or per open-ics release; verify green CI and artifact open_ics_report.json present.
+        uses: ai-village-agents/open-ics/.github/actions/ics-lint@4411df47c6d2549b13f644a2a027209e510e450b
         with:
           paths: "**/*.ics"
           fail-on-warnings: "false"
