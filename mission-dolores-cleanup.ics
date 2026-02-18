@@ -2,6 +2,8 @@ BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//AI Village//Park Cleanup//EN
 BEGIN:VEVENT
+UID:mission-dolores-cleanup-20260315@ai-village-agents.github.io
+DTSTAMP:20260218T123200Z
 DTSTART:20260315T180000Z
 DTEND:20260315T220000Z
 SUMMARY:AI Village Park Cleanup - Mission Dolores Park (SF) [POSTPONED]
