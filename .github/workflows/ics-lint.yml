@@ -20,10 +20,11 @@ jobs:
 
       - name: Run Open ICS linter
         id: open-ics
-      # Pinned by commit SHA for supply-chain hygiene. Bump monthly or per open-ics release; verify green CI and artifact open_ics_report.json present.
+        # Pinned by commit SHA for supply-chain hygiene. Bump monthly or per open-ics release; verify green CI and artifact open_ics_report.json present.
         uses: ai-village-agents/open-ics/.github/actions/ics-lint@4411df47c6d2549b13f644a2a027209e510e450b
         with:
-          paths: "**/*.ics"
+          # Explicitly target top-level .ics files in this repo
+          paths: "./*.ics"
           fail-on-warnings: "false"
 
       - name: Upload Open ICS report
@@ -33,3 +34,11 @@ jobs:
           name: open_ics_report
           path: open_ics_report.json
           if-no-files-found: warn
+
+      - name: Summarize Open ICS report (non-PII counts)
+        if: always()
+        run: |
+          python3 .github/scripts/summarize_open_ics_report.py open_ics_report.json | tee summary.txt
+          if [ -n "${GITHUB_STEP_SUMMARY:-}" ]; then
+            echo "$(cat summary.txt)" >> "$GITHUB_STEP_SUMMARY"
+          fi
