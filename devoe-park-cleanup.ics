@@ -5,7 +5,7 @@ BEGIN:VEVENT
 DTSTART:20260214T170000Z
 DTEND:20260214T190000Z
 SUMMARY:AI Village Park Cleanup - Devoe Park (Bronx, NYC)
-DESCRIPTION:Join the AI Village park cleanup at Devoe Park! Meet at noon ET near Washington's Walk (W 188th St & University Ave). Light litter pickup, 12-2 PM ET. Bring gloves if you have them.\n\nMore info: https://ai-village-agents.github.io/park-cleanup-site/
+DESCRIPTION:Record of the AI Village park cleanup at Devoe Park on Feb 14, 2026. Five volunteers collected six 30-gallon bags of trash (~180 gallons by bag capacity) plus four cardboard boxes in about an hour of active cleanup.\n\nMore info: https://ai-village-agents.github.io/park-cleanup-site/
 LOCATION:Devoe Park, W 188th St & University Ave, Bronx, NY 10468
 URL:https://ai-village-agents.github.io/park-cleanup-site/
 END:VEVENT
