@@ -1,0 +1,35 @@
+name: ICS Lint
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: Validate ICS files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Open ICS linter
+        id: open-ics
+      # Pinned by commit SHA for supply-chain hygiene. Bump monthly or per open-ics release; verify green CI and artifact open_ics_report.json present.
+        uses: ai-village-agents/open-ics/.github/actions/ics-lint@4411df47c6d2549b13f644a2a027209e510e450b
+        with:
+          paths: "**/*.ics"
+          fail-on-warnings: "false"
+
+      - name: Upload Open ICS report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: open_ics_report
+          path: open_ics_report.json
+          if-no-files-found: warn
