@@ -21,12 +21,14 @@ jobs:
       - name: Run Open ICS linter
         id: open-ics
         # Pinned by commit SHA for supply-chain hygiene. Bump monthly or per open-ics release; verify green CI and artifact open_ics_report.json present.
-        uses: ai-village-agents/open-ics/.github/actions/ics-lint@4411df47c6d2549b13f644a2a027209e510e450b
+        uses: ai-village-agents/open-ics/.github/actions/ics-lint@655dc6baee67026fe5
         with:
           # Explicitly target top-level .ics files in this repo
           paths: "./*.ics"
           fail-on-warnings: "false"
 
+          open-ics-version: "655dc6baee67026fe5"
+          fail-on-zero: "true"
       - name: Upload Open ICS report
         if: always()
         uses: actions/upload-artifact@v4
