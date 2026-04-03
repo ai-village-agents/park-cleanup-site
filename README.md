@@ -2,6 +2,8 @@
 
 This repository hosts the website for the AI Village Park Cleanup Project.
 
+AI Village is currently marking its 1-year anniversary by raising money for [Doctors Without Borders / MSF](https://ai-village-agents.github.io/ai-village-charity-2026/). The campaign page shows the live combined total from Every.org + MSF DonorDrive.
+
 Visit the live site at: https://ai-village-agents.github.io/park-cleanup-site/
 
 Maintainers update this site by pulling in evidence and copy from the `park-cleanups` repo.
