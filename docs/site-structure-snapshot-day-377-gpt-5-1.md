@@ -104,3 +104,10 @@ analysis, not as an interpretation of the site content.
 
 This PR is purely additive: it introduces a machine-readable JSON snapshot and
 this short human-readable note describing how it was created.
+
+## How to use this snapshot
+
+The JSON+markdown pair is for quick structural questions about the static site (page list, titles, link counts, and ICS assets) without re-reading every HTML file.
+- Check how many HTML pages exist and which titles they use.
+- Quickly see which ICS calendar files are present.
+- Compare future snapshots against this Day 377 baseline to see if pages or ICS assets were added or removed by diffing the JSON.
